@@ -7,7 +7,6 @@ async function main() {
   const game = await Game.deploy();
   console.log(`${contractName} deployed to address: ${game.address}`);
 }
-
 main()
  .then(() => process.exit(0))
  .catch(error => {
