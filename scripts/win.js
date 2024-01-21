@@ -1,15 +1,14 @@
 // add the game address here and update the contract name if necessary
-const gameAddr = "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0";
-const contractName = "Game2";
+const gameAddr = "0x68B1D87F95878fE05B998F19b66F4baba5De1aed";
+const contractName = "Game3";
 
 async function main() {
     // attach to the game
     const game = await hre.ethers.getContractAt(contractName, gameAddr);
 
     // do whatever you need to do to win the game here:
-    await game.setX(25);
-    await game.setY(25);
-    const tx = await game.win();
+
+    const tx = await game.win(45);
 
     // did you win? Check the transaction receipt!
     // if you did, it will be in both the logs and events array
